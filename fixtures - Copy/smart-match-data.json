@@ -1,0 +1,88 @@
+{
+  "smartMatches": [
+    {
+      "id": "sm-001",
+      "media": {
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=face",
+        "selected": false
+      },
+      "creator": "@user123",
+      "fanCount": 123456,
+      "tags": ["#travel", "#clouds"],
+      "date": "Thu, 7 Aug 2025",
+      "time": "10:00 AM",
+      "contentSlot": 1,
+      "actions": ["approve", "decline", "details"]
+    },
+    {
+      "id": "sm-002",
+      "media": {
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=face",
+        "selected": false
+      },
+      "creator": "@user123",
+      "fanCount": 123456,
+      "tags": ["#travel", "#clouds"],
+      "date": "Thu, 7 Aug 2025",
+      "time": "10:00 AM",
+      "contentSlot": 1,
+      "actions": ["approve", "decline", "details"]
+    },
+    {
+      "id": "sm-003",
+      "media": {
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=face",
+        "selected": false
+      },
+      "creator": "@user123",
+      "fanCount": 123456,
+      "tags": ["#travel", "#clouds"],
+      "date": "Thu, 7 Aug 2025",
+      "time": "10:00 AM",
+      "contentSlot": 1,
+      "actions": ["approve", "decline", "details"]
+    },
+    {
+      "id": "sm-004",
+      "media": {
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=face",
+        "selected": false
+      },
+      "creator": "@user123",
+      "fanCount": 123456,
+      "tags": ["#travel", "#clouds"],
+      "date": "Thu, 7 Aug 2025",
+      "time": "10:00 AM",
+      "contentSlot": 1,
+      "actions": ["approve", "decline", "details"]
+    },
+    {
+      "id": "sm-005",
+      "media": {
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=face",
+        "selected": false
+      },
+      "creator": "@user123",
+      "fanCount": 123456,
+      "tags": ["#travel", "#clouds"],
+      "date": "Thu, 7 Aug 2025",
+      "time": "10:00 AM",
+      "contentSlot": 1,
+      "actions": ["approve", "decline", "details"]
+    },
+    {
+      "id": "sm-006",
+      "media": {
+        "thumbnail": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=face",
+        "selected": false
+      },
+      "creator": "@user123",
+      "fanCount": 123456,
+      "tags": ["#travel", "#clouds"],
+      "date": "Thu, 7 Aug 2025",
+      "time": "10:00 AM",
+      "contentSlot": 1,
+      "actions": ["approve", "decline", "details"]
+    }
+  ]
+}

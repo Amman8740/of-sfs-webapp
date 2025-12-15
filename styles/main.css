@@ -1,0 +1,451 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modal Sizing - Consistent across all screen sizes */
+.modal-overlay {
+  /* Ensure modals maintain consistent sizing */
+  zoom: 1 !important;
+  transform: none !important;
+}
+
+/* Prevent zoom effects on modals */
+.modal-overlay * {
+  zoom: 1 !important;
+  transform: none !important;
+}
+
+/* Ensure fixed sizing for all modals */
+.modal-overlay > div {
+  zoom: 1 !important;
+  transform: none !important;
+}
+
+/* Schedule New SFS Modal - Fixed sizing */
+.schedule-modal {
+  width: 500px !important;
+  max-width: 500px !important;
+  min-width: 500px !important;
+}
+
+/* Calendar Picker Responsive Positioning */
+.calendar-picker-position {
+  /* Fixed size regardless of screen size */
+  width: 400px !important;
+  max-width: 400px !important;
+  min-width: 400px !important;
+  /* Default positioning for larger screens */
+  left: calc(50% + 320px) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Responsive positioning for smaller screens - only adjust position, not size */
+@media (max-width: 1200px) {
+  .calendar-picker-position {
+    left: calc(50% + 280px) !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .calendar-picker-position {
+    left: calc(50% + 240px) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .calendar-picker-position {
+    left: 50% !important;
+    top: 60% !important;
+    transform: translate(-50%, -50%) !important;
+    /* Only on very small screens, allow some flexibility */
+    width: 380px !important;
+    max-width: 380px !important;
+    min-width: 380px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-picker-position {
+    left: 50% !important;
+    top: 70% !important;
+    transform: translate(-50%, -50%) !important;
+    /* Only on mobile, use viewport width but maintain aspect */
+    width: 90vw !important;
+    max-width: 90vw !important;
+    min-width: 300px !important;
+  }
+}
+
+/* Generated with https://designrift.vercel.app */ 
+/* LIGHT THEME */
+:root {
+
+  /* CANVAS */
+  --canvas-base: #fcfcfc;
+  --canvas-bg-subtle: #F8F8F8;
+  --canvas-bg: #f3f3f3;
+  --canvas-bg-hover: #EDEDED;
+  --canvas-bg-active: #E8E8E8;
+  --canvas-line: #E2E2E2;
+  --canvas-border: #dbdbdb;
+  --canvas-border-hover: #c7c7c7;
+  --canvas-solid: #8f8f8f;
+  --canvas-solid-hover: #858585;
+  --canvas-text: #6f6f6f;
+  --canvas-text-contrast: #11181C;
+  --canvas-on-canvas: #fff;
+
+  /* PRIMARY */
+  --primary-base: #fbfdff;
+  --primary-bg-subtle: #f5faff;
+  --primary-bg: #edf6ff;
+  --primary-bg-hover: #e1f0ff;
+  --primary-bg-active: #cee7fe;
+  --primary-line: #b7d9f8;
+  --primary-border: #96c7f2;
+  --primary-border-hover: #5eb0ef;
+  --primary-solid: #0091ff;
+  --primary-solid-hover: #0081f1;
+  --primary-text: #0091ff;
+  --primary-text-contrast: #00254d;
+  --primary-on-primary: #ffffff;
+
+  /* SECONDARY */
+  --secondary-base: #fcfcfc;
+  --secondary-bg-subtle: #f8f8f8;
+  --secondary-bg: #f3f3f3;
+  --secondary-bg-hover: #ededed;
+  --secondary-bg-active: #e8e8e8;
+  --secondary-line: #e2e2e2;
+  --secondary-border: #dbdbdb;
+  --secondary-border-hover: #c7c7c7;
+  --secondary-solid: #8f8f8f;
+  --secondary-solid-hover: #858585;
+  --secondary-text: #6f6f6f;
+  --secondary-text-contrast: #171717;
+  --secondary-on-secondary: #ffffff;
+
+  /* SUCCESS */
+  --success-base: #fbfefc;
+  --success-bg-subtle: #f2fcf5;
+  --success-bg: #E9F9EE;
+  --success-bg-hover: #ddf3e4;
+  --success-bg-active: #ccebd7;
+  --success-line: #B4DFC4;
+  --success-border: #92ceac;
+  --success-border-hover: #5bb98c;
+  --success-solid: #30a46c;
+  --success-solid-hover: #299764;
+  --success-text: #18794e;
+  --success-text-contrast: #153226;
+  --success-on-success: #ffffff;
+
+  /* WARNING */
+  --warning-base: #fdfdf9;
+  --warning-bg-subtle: #fffce8;
+  --warning-bg: #fffbd1;
+  --warning-bg-hover: #fff8bb;
+  --warning-bg-active: #fef2a4;
+  --warning-line: #f9e68c;
+  --warning-border: #efd36c;
+  --warning-border-hover: #ebbc00;
+  --warning-solid: #f5d90a;
+  --warning-solid-hover: #f7ce00;
+  --warning-text: #946800;
+  --warning-text-contrast: #35290f;
+  --warning-on-warning: #000000;
+
+  /* ALERT */
+  --alert-base: #fffcfc;
+  --alert-bg-subtle: #fff8f8;
+  --alert-bg: #ffefef;
+  --alert-bg-hover: #ffe5e5;
+  --alert-bg-active: #fdd8d8;
+  --alert-line: #f9c6c6;
+  --alert-border: #f3aeaf;
+  --alert-border-hover: #eb9091;
+  --alert-solid: #e5484d;
+  --alert-solid-hover: #dc3d43;
+  --alert-text: #cd2b31;
+  --alert-text-contrast: #381316;
+  --alert-on-alert: #ffffff;
+
+  /* INFO */
+  --info-base: #fbfdff;
+  --info-bg-subtle: #f5faff;
+  --info-bg: #edf6ff;
+  --info-bg-hover: #e1f0ff;
+  --info-bg-active: #cee7fe;
+  --info-line: #b7d9f8;
+  --info-border: #96c7f2;
+  --info-border-hover: #5eb0ef;
+  --info-solid: #0091ff;
+  --info-solid-hover: #0081f1;
+  --info-text: #006adc;
+  --info-text-contrast: #00254d;
+  --info-on-info: #ffffff;
+}
+
+/* DARK THEME */
+.dark {
+
+  /* CANVAS */
+  --canvas-base: #161616;
+  --canvas-bg-subtle: #1c1c1c;
+  --canvas-bg: #232323;
+  --canvas-bg-hover: #282828;
+  --canvas-bg-active: #2e2e2e;
+  --canvas-line: #343434;
+  --canvas-border: #3e3e3e;
+  --canvas-border-hover: #505050;
+  --canvas-solid: #707070;
+  --canvas-solid-hover: #7e7e7e;
+  --canvas-text: #a0a0a0;
+  --canvas-text-contrast: #ededed;
+  --canvas-on-canvas: #000;
+
+  /* PRIMARY */
+  --primary-base: #0f1720;
+  --primary-bg-subtle: #0f1b2d;
+  --primary-bg: #10243e;
+  --primary-bg-hover: #102a4c;
+  --primary-bg-active: #0f3058;
+  --primary-line: #0d3868;
+  --primary-border: #0a4481;
+  --primary-border-hover: #0954a5;
+  --primary-solid: #0091ff;
+  --primary-solid-hover: #369eff;
+  --primary-text: #0091ff;
+  --primary-text-contrast: #eaf6ff;
+  --primary-on-primary: #ffffff;
+
+  /* SECONDARY */
+  --secondary-base: #161616;
+  --secondary-bg-subtle: #1c1c1c;
+  --secondary-bg: #232323;
+  --secondary-bg-hover: #282828;
+  --secondary-bg-active: #2e2e2e;
+  --secondary-line: #343434;
+  --secondary-border: #3e3e3e;
+  --secondary-border-hover: #505050;
+  --secondary-solid: #707070;
+  --secondary-solid-hover: #7e7e7e;
+  --secondary-text: #a0a0a0;
+  --secondary-text-contrast: #ededed;
+  --secondary-on-secondary: #ffffff;
+
+  /* SUCCESS */
+  --success-base: #0d1912;
+  --success-bg-subtle: #0c1f17;
+  --success-bg: #0f291e;
+  --success-bg-hover: #113123;
+  --success-bg-active: #133929;
+  --success-line: #164430;
+  --success-border: #1b543a;
+  --success-border-hover: #236e4a;
+  --success-solid: #30a46c;
+  --success-solid-hover: #3cb179;
+  --success-text: #4cc38a;
+  --success-text-contrast: #e5fbeb;
+  --success-on-success: #ffffff;
+
+  /* WARNING */
+  --warning-base: #1c1500;
+  --warning-bg-subtle: #221a00;
+  --warning-bg: #2c2100;
+  --warning-bg-hover: #352800;
+  --warning-bg-active: #3e3000;
+  --warning-line: #493c00;
+  --warning-border: #594a05;
+  --warning-border-hover: #705e00;
+  --warning-solid: #f5d90a;
+  --warning-solid-hover: #ffef5c;
+  --warning-text: #f0c000;
+  --warning-text-contrast: #fffad1;
+  --warning-on-warning: #000000;
+
+  /* ALERT */
+  --alert-base: #1f1315;
+  --alert-bg-subtle: #291415;
+  --alert-bg: #3c181a;
+  --alert-bg-hover: #481a1d;
+  --alert-bg-active: #541b1f;
+  --alert-line: #671e22;
+  --alert-border: #822025;
+  --alert-border-hover: #aa2429;
+  --alert-solid: #e5484d;
+  --alert-solid-hover: #f2555a;
+  --alert-text: #ff6369;
+  --alert-text-contrast: #feecee;
+  --alert-on-alert: #ffffff;
+
+  /* INFO */
+  --info-base: #0f1720;
+  --info-bg-subtle: #0f1b2d;
+  --info-bg: #10243e;
+  --info-bg-hover: #102a4c;
+  --info-bg-active: #0f3058;
+  --info-line: #0d3868;
+  --info-border: #0a4481;
+  --info-border-hover: #0954a5;
+  --info-solid: #0091ff;
+  --info-solid-hover: #369eff;
+  --info-text: #52a9ff;
+  --info-text-contrast: #eaf6ff;
+  --info-on-info: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  touch-action: manipulation;
+  font-feature-settings:
+    'case' 1,
+    'rlig' 1,
+    'calt' 0;
+}
+
+html,
+body {
+  font-family: 'Manrope', -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
+    'Helvetica', sans-serif;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis-weight: none;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p a {
+  @apply hover:underline;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.height-screen-helper {
+  min-height: calc(100vh - 80px);
+}
+
+/* Custom thin scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+/* Dark mode scrollbars */
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark * {
+  scrollbar-color: #4b5563 transparent;
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+

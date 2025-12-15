@@ -1,0 +1,47 @@
+{
+  "calendarEvents": [
+    {
+      "id": "1",
+      "title": "SFS with John 12 - 12:30am",
+      "date": "2025-07-07",
+      "startTime": "9",
+      "endTime": "9:30",
+      "color": "light-green"
+    },
+    {
+      "id": "2", 
+      "title": "SFS with John 12 - 12:30am",
+      "date": "2025-07-09",
+      "startTime": "7",
+      "endTime": "7:30",
+      "color": "light-blue"
+    },
+    {
+      "id": "3",
+      "title": "SFS with John 12 - 12:30am", 
+      "date": "2025-07-11",
+      "startTime": "12",
+      "endTime": "12:30",
+      "color": "light-gray"
+    },
+    {
+      "id": "4",
+      "title": "SFS with John 12 - 12:30am",
+      "date": "2025-07-12", 
+      "startTime": "11",
+      "endTime": "11:30",
+      "color": "light-red"
+    }
+  ],
+  "currentWeek": {
+    "startDate": "2025-07-06",
+    "endDate": "2025-07-12",
+    "month": "July",
+    "year": "2025",
+    "currentDay": "2025-07-09"
+  },
+  "timeSlots": [
+    "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", 
+    "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "7 PM"
+  ]
+}
